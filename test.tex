@@ -1,0 +1,62 @@
+\documentclass[11pt, parskip=half-]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} 
+\usepackage{blindtext, lipsum}
+\usepackage{listings}
+
+\usepackage{amsmath, amssymb, amsthm}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[headsepline]{scrlayer-scrpage}
+\ihead{Vorlesung}
+\ohead{Übungsblatt Nr.}
+
+\newcounter{teilaufgabe}
+
+
+\newcommand{\Aufgabe}{
+	\section{Aufgabe}
+	\setcounter{teilaufgabe}{1}
+}
+
+\newcommand{\Teilaufgabe}{
+	\paragraph{Teilaufgabe \thesection \alph{teilaufgabe}}
+}
+
+
+\RedeclareSectionCommand[
+beforeskip=0.1\baselineskip,
+afterskip=0.1\baselineskip
+]{section}
+
+\RedeclareSectionCommand[
+beforeskip=0.1\baselineskip
+]{paragraph}
+
+\begin{document}	
+	\begin{tabular}{@{} l}
+		Zettelpartner 1 \\ Zettelpartner 2 \\ Zettelpartner 3
+	\end{tabular} \hfill	\begin{tabular}{|r|r|r|r||r| }
+		A1 & A2 & A3 & A4 & Summe: \hspace*{2mm}\\[1ex] \hline
+		& & & & \\[1ex]
+	\end{tabular}
+
+	\Aufgabe
+	
+	\Teilaufgabe
+	
+	\lipsum[1]
+	
+	\Teilaufgabe
+	
+	\lipsum[1]
+	
+	\Aufgabe
+	
+	\Teilaufgabe
+	
+	\lipsum[1]
+	
+\end{document}
